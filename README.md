@@ -11,7 +11,7 @@ Example usage of CodeceptJS test framework
 - basic example = `yarn test`
 - codecept.conf.js usage
 - page object pattern example
-- Parallelisation (`run-multiple`)
+- parallelised example = `yarn test-run-multiple`
     - shards by 'Feature' (i.e. by test file)
 
 
