@@ -11,7 +11,10 @@ exports.config = {
       waitForAction: 500
     }
   },
-  include: { I: './steps_file.js' },
+  include: {
+    I: './steps_file.js',
+    homePage: './test/pages/HomePage.js'
+  },
   bootstrap: false,
   mocha: {
     reporterOptions: {
