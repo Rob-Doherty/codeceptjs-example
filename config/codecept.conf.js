@@ -1,7 +1,7 @@
 const outputDir = './output';
 
 exports.config = {
-  tests: './test/*_test.js',
+  tests: '../test/*_test.js',
   timeout: 10000,
   output: outputDir,
   helpers: {
@@ -12,8 +12,8 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js',
-    homePage: './test/pages/HomePage.js'
+    I: '../steps_file.js',
+    homePage: '../test/pages/HomePage.js'
   },
   bootstrap: false,
   mocha: {

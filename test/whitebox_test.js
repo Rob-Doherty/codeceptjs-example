@@ -1,5 +1,5 @@
 
-Feature('Whitebox Homepage', { retries: 1 });
+Feature('Whitebox', { retries: 1 });
 
 Scenario('open homepage', I => {
   I.amOnPage('/');

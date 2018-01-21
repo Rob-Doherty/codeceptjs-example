@@ -11,6 +11,8 @@ Example usage of CodeceptJS test framework
 - basic example = `yarn test`
 - codecept.conf.js usage
 - page object pattern example
+- Parallelisation (`run-multiple`)
+    - shards by 'Feature' (i.e. by test file)
 
 
 ## TODO:
@@ -19,5 +21,4 @@ Example usage of CodeceptJS test framework
 - Custom Helper
 - Extend Hooks
 - Mobile Testing
-- Parallelisation (`run-multiple`)
 - WebdriverIO for multiple browsers

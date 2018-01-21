@@ -11,7 +11,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "codeceptjs run --steps --reporter mochawesome"
+    "test": "codeceptjs run -c config/codecept.conf.js --steps --reporter mochawesome",
+    "test-run-multiple": "codeceptjs run-multiple --all -c config/run-multiple.conf.js --reporter mochawesome"
   },
   "pre-commit": [
     "lint"
@@ -20,6 +21,7 @@
     "codeceptjs": "^1.1.1",
     "eslint": "^4.16.0",
     "eslint-plugin-mocha": "^4.11.0",
+    "glob": "^7.1.2",
     "mochawesome": "^3.0.1",
     "pre-commit": "^1.2.2",
     "puppeteer": "^1.0.0",
