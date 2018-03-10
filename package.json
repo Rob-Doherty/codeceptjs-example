@@ -18,13 +18,13 @@
     "lint"
   ],
   "devDependencies": {
-    "codeceptjs": "^1.1.1",
+    "codeceptjs": "^1.1.6",
     "eslint": "^4.16.0",
     "eslint-plugin-mocha": "^4.11.0",
     "glob": "^7.1.2",
     "mochawesome": "^3.0.1",
     "pre-commit": "^1.2.2",
-    "puppeteer": "^1.0.0",
+    "puppeteer": "^1.1.1",
     "webdriverio": "^4.10.1"
   }
 }
