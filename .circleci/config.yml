@@ -34,7 +34,7 @@ jobs:
       - run: yarn lint
 
   yarn_test:
-    executor: macos-config
+    executor: linux
     steps:
       - attach_workspace:
           at: ./
