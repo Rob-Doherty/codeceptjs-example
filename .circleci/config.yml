@@ -1,0 +1,62 @@
+
+version: 2.1
+
+orbs:
+  node: circleci/node@3.0.0
+
+executors:
+  macos-config:
+    macos:
+      xcode: 11.4.1
+
+commands:
+  install_dependencies:
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+
+jobs:
+  setup:
+    executor: macos-config
+    steps:
+      - install_dependencies
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./*
+
+  yarn_lint:
+    executor: macos-config
+    steps:
+      - attach_workspace:
+          at: ./
+      - run: yarn lint
+
+  yarn_test:
+    executor: macos-config
+    steps:
+      - attach_workspace:
+          at: ./
+      - run: yarn test
+
+  yarn_test_parallel:
+    executor: macos-config
+    steps:
+      - attach_workspace:
+          at: ./
+      - run: test-run-multiple
+
+workflows:
+  run_tests:
+    jobs:
+      - setup
+      - yarn_lint:
+          requires:
+            - setup
+      - yarn_test:
+          requires:
+            - setup
+      - yarn_test_parallel:
+          requires:
+            - setup
