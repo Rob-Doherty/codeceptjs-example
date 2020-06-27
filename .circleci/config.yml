@@ -5,9 +5,9 @@ orbs:
   node: circleci/node@3.0.0
 
 executors:
-  macos-config:
-    macos:
-      xcode: 11.4.1
+  linux:
+    docker:
+      - image: 'cimg/node:lts'
 
 commands:
   install_dependencies:
@@ -18,7 +18,7 @@ commands:
 
 jobs:
   setup:
-    executor: macos-config
+    executor: linux
     steps:
       - install_dependencies
       - persist_to_workspace:
@@ -27,7 +27,7 @@ jobs:
             - ./*
 
   yarn_lint:
-    executor: macos-config
+    executor: linux
     steps:
       - attach_workspace:
           at: ./
@@ -41,7 +41,7 @@ jobs:
       - run: yarn test
 
   yarn_test_parallel:
-    executor: macos-config
+    executor: linux
     steps:
       - attach_workspace:
           at: ./
