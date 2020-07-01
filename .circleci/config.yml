@@ -3,7 +3,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@3.0.0
-  puppeteer: threetreeslight/puppeteer@0.1.2
+#  puppeteer: threetreeslight/puppeteer@0.1.2
 
 executors:
   linux:
@@ -16,7 +16,7 @@ commands:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-      - run: sudo apt-get update
+#      - run: sudo apt-get update
 #      - puppeteer/install
 
 jobs:
