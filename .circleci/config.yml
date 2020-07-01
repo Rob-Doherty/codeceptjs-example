@@ -8,7 +8,7 @@ orbs:
 executors:
   linux:
     docker:
-      - image: 'alekzonder/puppeteer'
+      - image: 'codeception/codeceptjs'
 
 commands:
   install_dependencies:
