@@ -8,7 +8,8 @@ exports.config = {
     Puppeteer: {
       url: 'http://www.whiteboxitsolutions.com',
       show: true,
-      waitForAction: 500
+      waitForAction: 500,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
     }
   },
   include: {
