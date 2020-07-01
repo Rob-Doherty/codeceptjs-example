@@ -16,6 +16,7 @@ commands:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
+      - run: sudo apt-get update
       - puppeteer/install
 
 jobs:
