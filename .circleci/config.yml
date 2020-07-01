@@ -8,7 +8,7 @@ orbs:
 executors:
   linux:
     docker:
-      - image: 'buildkite/puppeteer'
+      - image: 'alekzonder/puppeteer'
 
 commands:
   install_dependencies:
