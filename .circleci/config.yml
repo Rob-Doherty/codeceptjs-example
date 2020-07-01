@@ -39,6 +39,7 @@ jobs:
   yarn_test:
     executor: linux
     steps:
+      - install_dependencies
       - attach_workspace:
           at: ./
       - run: yarn test
@@ -46,6 +47,7 @@ jobs:
   yarn_test_parallel:
     executor: linux
     steps:
+      - install_dependencies
       - attach_workspace:
           at: ./
       - run: test-run-multiple
