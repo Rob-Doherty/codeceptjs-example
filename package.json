@@ -1,6 +1,6 @@
 {
   "name": "codeceptjs-example",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Example usage of CodeceptJS test framework",
   "main": "index.js",
   "repository": "git@github.com:Rob-Doherty/codeceptjs-example.git",
