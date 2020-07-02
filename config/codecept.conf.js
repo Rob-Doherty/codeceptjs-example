@@ -9,7 +9,12 @@ exports.config = {
       url: 'http://www.whiteboxitsolutions.com',
       show: true,
       waitForAction: 500,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      chrome: {
+        args: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox'
+        ]
+      }
     }
   },
   include: {
