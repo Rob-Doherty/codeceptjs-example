@@ -45,7 +45,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ./
-      - run: test-run-multiple
+      - run: yarn test-run-multiple
 
 workflows:
   run_tests:
