@@ -3,7 +3,6 @@ version: 2.1
 
 orbs:
   node: circleci/node@3.0.0
-#  puppeteer: threetreeslight/puppeteer@0.1.2
 
 executors:
   linux:
@@ -16,8 +15,6 @@ commands:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-#      - run: Xvfb -ac :99 -screen 0 1280x1024x16 & export DISPLAY=:99
-#      - puppeteer/install
 
 jobs:
   setup:
@@ -39,7 +36,6 @@ jobs:
   yarn_test:
     executor: linux
     steps:
-      - install_dependencies
       - attach_workspace:
           at: ./
       - run: yarn test
@@ -47,7 +43,6 @@ jobs:
   yarn_test_parallel:
     executor: linux
     steps:
-      - install_dependencies
       - attach_workspace:
           at: ./
       - run: test-run-multiple
