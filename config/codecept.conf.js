@@ -7,7 +7,7 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'http://www.whiteboxitsolutions.com',
-      show: true,
+      show: false,
       waitForAction: 500,
       chrome: {
         args: [
