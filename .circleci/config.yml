@@ -16,7 +16,7 @@ commands:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-#      - run: sudo apt-get update
+      - run: Xvfb -ac :99 -screen 0 1280x1024x16 & export DISPLAY=:99
 #      - puppeteer/install
 
 jobs:
