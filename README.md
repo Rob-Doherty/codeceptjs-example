@@ -13,6 +13,7 @@ Example usage of CodeceptJS test framework
 - page object pattern example
 - parallelised example = `yarn test-run-multiple`
     - shards by 'Feature' (i.e. by test file)
+- CircleCI test pipelines (`yarn_lint`, `yarn_test`, `yarn_test_parallel`)
 
 
 ## TODO:

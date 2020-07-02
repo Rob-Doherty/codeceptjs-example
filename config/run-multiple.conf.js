@@ -13,8 +13,14 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'http://www.whiteboxitsolutions.com',
-      show: true,
-      waitForAction: 500
+      show: false,  // headless by default to run on CircleCI unix box
+      waitForAction: 500,
+      chrome: {
+        args: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox'
+        ]
+      }
     }
   },
   include: {
