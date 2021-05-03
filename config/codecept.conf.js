@@ -2,12 +2,12 @@ const outputDir = './output';
 
 exports.config = {
   tests: '../test/*_test.js',
-  timeout: 10000,
   output: outputDir,
   helpers: {
     Puppeteer: {
       url: 'http://www.whiteboxitsolutions.com',
       show: false,  // headless by default to run on CircleCI unix box
+      waitForTimeout: 10000,
       waitForAction: 500,
       chrome: {
         args: [
@@ -21,7 +21,6 @@ exports.config = {
     I: '../steps_file.js',
     homePage: '../test/pages/HomePage.js'
   },
-  bootstrap: false,
   mocha: {
     reporterOptions: {
       reportDir: outputDir,

@@ -4,7 +4,7 @@
   "description": "Example usage of CodeceptJS test framework",
   "main": "index.js",
   "repository": "git@github.com:Rob-Doherty/codeceptjs-example.git",
-  "author": "Rob Doherty <robertdoherty@hotmail.co.uk>",
+  "author": "Rob Doherty-Kelly",
   "license": "MIT",
   "engines": {
     "node": ">=10.19.0"
@@ -18,13 +18,12 @@
     "lint"
   ],
   "devDependencies": {
-    "codeceptjs": "^2.6.6",
-    "eslint": "^7.3.1",
-    "eslint-plugin-mocha": "^7.0.1",
+    "codeceptjs": "^3.0.6",
+    "eslint": "^7.25.0",
+    "eslint-plugin-mocha": "^8.1.0",
     "glob": "^7.1.6",
-    "mochawesome": "^6.1.1",
+    "mochawesome": "^6.2.2",
     "pre-commit": "^1.2.2",
-    "puppeteer": "^4.0.1",
-    "webdriverio": "^6.1.22"
+    "puppeteer": "^9.1.0"
   }
 }
