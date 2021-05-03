@@ -1,12 +1,12 @@
 
 Feature('GitHub', { retries: 1 });
 
-Scenario('open homepage', I => {
+Scenario('open homepage', ({I}) => {
   I.amOnPage('https://github.com/');
   I.see('GitHub');
 });
 
-Scenario('search for Rob-Doherty', I => {
+Scenario('search for Rob-Doherty', ({I}) => {
   I.amOnPage('https://github.com/');
   I.click({css: 'button.btn-link'});
   I.fillField({css: 'input.header-search-input'}, 'Rob-Doherty');
